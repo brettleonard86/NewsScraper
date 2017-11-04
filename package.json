@@ -1,0 +1,30 @@
+{
+  "name": "newsscraper",
+  "version": "1.0.0",
+  "description": "In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettleonard86/NewsScraper.git"
+  },
+  "author": "Brett Leoanrd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brettleonard86/NewsScraper/issues"
+  },
+  "homepage": "https://github.com/brettleonard86/NewsScraper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "mongoose": "^4.12.4",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {}
+}
