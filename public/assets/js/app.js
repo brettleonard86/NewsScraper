@@ -23,12 +23,12 @@ $(document).on("click", "#scrapeButt", function(){
     method: "POST",
     url: "/scrape"
   })
-  .then(function(data){
-    $.GET("/articles", function(data){
-      $("#articles").html(data);
+  .then(function(result){
+    $.GET("/articles", function(result){
+      $("#articles").html(result);
       console.log("app.js scrape button pushed");
     });
-    console.log(data);
+    console.log(result);
   });
 });
 
