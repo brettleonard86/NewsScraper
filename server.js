@@ -48,6 +48,18 @@ app.get("/", function(req, res){
   res.render('index')
 });
 
+app.get("/saved", function(req, res){
+  res.render('saved')
+});
+
+app.get("/scraped", function(req, res){
+  res.render('scraped')
+});
+
+app.get("/articles", function(req, res){
+  res.render('scraped')
+});
+
 // A GET route for scraping the KUSports website
 app.post("/scrape", function(req, res){
   // First, we grab the body of the html with request
@@ -75,6 +87,7 @@ app.post("/scrape", function(req, res){
         .then(function(dbArticle) {
           // If we were able to successfully scrape and save an article, send a message to the client
           res.send("Scrape Complete");
+          res.render(result);
           
         })
         .catch(function(err){
