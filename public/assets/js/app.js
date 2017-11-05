@@ -24,14 +24,12 @@ $(document).on("click", "#scrapeButt", function(){
     url: "/scrape"
   })
   .then(function(data){
-    console.log(data)
-    console.log("app scraped")
     $.GET("/articles", function(data){
       $("#articles").html(data);
       console.log("app.js scrape button pushed");
-    });  
+    });
+    console.log(data);
   });
-  
 });
 
 // // Whenever someone clicks a p tag // need to change this to a save button 
