@@ -5,28 +5,37 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, creat a new UserSChema object 
 // This is simialar to a Sequelize model
-var ArticalSchema = new Schema({
+var headlineSchema = new Schema({
   //`title` is required and of type
-  title: {
+  headline: {
+    type: String,
+    required: true,
+    unique: { index: {unique: true }}
+  },
+  // summary must be entered
+  summary: {
     type: String,
     required: true
   },
   // `link` is required and of type String
-  link: {
+  url: {
     type: String,
     required: true
   },
-  //`note` is an object that stores a Note id
-  // The ref property links the ObjectId to the Note model
-  // This allows us to populate the Article with an associated note
-  note: {
-    type: Schema.Types.ObjectId,
-    ref: "Note"
+  //date
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  saved: {
+    type: Boolean,
+    default: false
   }
+
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Article = mongoose.model("Article", ArticalSchema);
+var Headline = mongoose.model("Headline", headlineSchema);
 
-//Export the Article model
-module.exports = Article;
+//Export the Headline model
+module.exports = Headline;
