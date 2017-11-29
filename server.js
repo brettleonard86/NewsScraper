@@ -36,7 +36,8 @@ app.use(routes);
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/newscraper", {
+let mongoUrl = process.env.MONGODB_URI || "mongodb://localhost/newscraper"
+mongoose.connect(mongoUrl, {
   useMongoClient: true
 });
 
