@@ -12,11 +12,6 @@ var headlineSchema = new Schema({
     required: true,
     unique: { index: {unique: true }}
   },
-  // summary must be entered
-  summary: {
-    type: String,
-    required: true
-  },
   // `link` is required and of type String
   url: {
     type: String,

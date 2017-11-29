@@ -1,4 +1,3 @@
-/* gloabl bootbox */
 $(document).ready(function() {
   // Setting a reference to the article-container div where all the dynamic content will go
   // Adding event listeners to any dynamically generated "save article"
@@ -59,9 +58,10 @@ $(document).ready(function() {
         // "<div class='panel-body'>",
         // article.summary,
         // "</div>",
-        // "</div>"
+         "</div>"
       ].join("")
     );
+
     // We attach the article's id to the jQuery element
     // We will use this when trying to figure out which article the user wants to save
     panel.data("_id", article._id);
@@ -123,6 +123,6 @@ $(document).ready(function() {
       initPage();
       bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "<h3>");
     });
-    console.log("Scrape Button")
+    
   }
 });

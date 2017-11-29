@@ -5,7 +5,11 @@ module.exports = {
   scrapeHeadlines: function(req, res){
   return scrape()
     .then(function(articles){
+      
+      console.log(articles)
+      
       return db.Headline.create(articles);
+
     })
     .then(function(dbHeadline){
       if (dbHeadline.length === 0){

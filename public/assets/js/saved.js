@@ -1,4 +1,3 @@
-/* global bootbox */
 $(document).ready(function() {
   // Getting a reference to the article container div we will be rendering all articles inside of
   var articleContainer = $(".article-container");
@@ -59,9 +58,9 @@ $(document).ready(function() {
         "<a class='btn btn-info notes'>Article Notes</a>",
         "</h3>",
         "</div>",
-        "<div class='panel-body'>",
-        article.summary,
-        "</div>",
+        // "<div class='panel-body'>",
+        // article.summary,
+        // "</div>",
         "</div>"
       ].join("")
     );

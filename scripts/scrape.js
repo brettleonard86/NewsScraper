@@ -24,8 +24,10 @@ var scrape = function(){
 
       var url = $(this)
         .children("a")
-        .attr("http://www.kusports.com"+"href");
-
+        .attr("href");
+        url = "http://www.kusports.com" + url
+      
+    
       if (head && url) {
         // This section uses regular expressions and the trim function to tidy our headlines and summaries
         // We're removing extra lines, extra spacing, extra tabs, etc.. to increase to typographical cleanliness.
@@ -41,7 +43,9 @@ var scrape = function(){
         articles.push(dataToAdd);
       }
     });
+    
     return articles;
+
   });
 };
 
