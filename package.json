@@ -4,7 +4,8 @@
   "description": "In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.",
   "main": "server.js",
   "engines": {
-    "node": "8.9.1"
+    "node": "8.9.1",
+    "npm": "5.5.1"
   },
   "scripts": {
     "test": "node server.js",
